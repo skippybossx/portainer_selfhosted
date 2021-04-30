@@ -59,7 +59,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "librenms/librenms:latest",
+			"image": "librenms/librenms",
 			"logo": "https://secure.gravatar.com/avatar/aeed3f63cf6744469af53a18875de783.jpg",
 			"platform": "linux",
 			"ports": [
