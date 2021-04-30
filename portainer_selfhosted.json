@@ -38,6 +38,42 @@
 			]
 		},
 		{
+			"category": [
+				"Other"
+			],
+			"description": "Paperwork is an open-source, self-hosted alternative to services like Evernote ®, Microsoft OneNote ® or Google Keep ®",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "zuhkov/paperwork",
+			"logo": "https://paperwork.cloud/paperwork-logo.png",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"title": "Paperwork",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/config"
+				}
+			]
+		},
+		{
 			"type": 1,
 			"title": "Registry",
 			"description": "Docker image registry",
