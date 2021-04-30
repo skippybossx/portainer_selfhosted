@@ -110,43 +110,6 @@
 			]
 		},
 		{
-			"category": [
-				"Other"
-			],
-			"description": "Welcome to LibreNMS, a fully featured network monitoring system that provides a wealth of features and device support.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "librenms/librenms:latest",
-			"logo": "https://secure.gravatar.com/avatar/aeed3f63cf6744469af53a18875de783.jpg",
-			"platform": "linux",
-			"ports": [
-				"8000/tcp"
-				"514/udp"
-			],
-			"title": "LibreNMS",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/data"
-				}
-			]
-		},
-		{
 			"type": 1,
 			"title": "Registry",
 			"description": "Docker image registry",
