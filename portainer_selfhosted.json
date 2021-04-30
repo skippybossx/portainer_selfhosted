@@ -64,7 +64,6 @@
 			"platform": "linux",
 			"ports": [
 				"8000/tcp"
-				"514/udp"
 			],
 			"title": "LibreNMS",
 			"type": 1,
