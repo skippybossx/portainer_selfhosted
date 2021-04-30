@@ -77,6 +77,42 @@
 			"category": [
 				"Other"
 			],
+			"description": "Grafana has become the world’s most popular technology used to compose observability dashboards with everything from Prometheus & Graphite metrics, to logs and application data to power plants and beehives.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "grafana/grafana",
+			"logo": "https://secure.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d.jpg",
+			"platform": "linux",
+			"ports": [
+				"3000/tcp"
+			],
+			"title": "Grafana",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/grafana
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
 			"description": "Paperwork is an open-source, self-hosted alternative to services like Evernote ®, Microsoft OneNote ® or Google Keep ®",
 			"env": [
 				{
