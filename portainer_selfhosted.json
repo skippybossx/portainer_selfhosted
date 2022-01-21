@@ -59,7 +59,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "adolfintel/speedtest",
+			"image": "linuxserver/librespeed",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
 			"platform": "linux",
 			"ports": [
