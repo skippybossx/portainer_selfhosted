@@ -60,7 +60,7 @@
 				}
 			],
 			"image": "lscr.io/linuxserver/librespeed:latest",
-			"logo": "hhttps://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
+			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
 			"platform": "linux",
 			"ports": [
 				"80/tcp"
