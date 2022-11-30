@@ -23,7 +23,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "jasonbean/guacamole:latest",
+			"image": "oznu/guacamole:latest",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/guacamole.png",
 			"platform": "linux",
 			"ports": [
