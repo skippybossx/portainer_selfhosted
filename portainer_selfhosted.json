@@ -244,9 +244,9 @@
 			"logo": "https://nginxproxymanager.com/icon.png",
 			"platform": "linux",
 			"ports": [
-				"443/tcp",
+				"81/tcp",
 				"80/tcp",
-				"81/tcp"
+				"443/tcp"
 			],
 			"title": "NginxProxyManager",
 			"type": 1,
