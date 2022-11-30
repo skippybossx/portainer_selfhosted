@@ -244,13 +244,16 @@
 			"logo": "https://nginxproxymanager.com/icon.png",
 			"platform": "linux",
 			"ports": [
-				"443/tcp"
+				"443/tcp",
+				"80/tcp",
+				"81/tcp"
 			],
 			"title": "NginxProxyManager",
 			"type": 1,
 			"volumes": [
 				{
-					"container": "/app/data"
+					"data": "/data",
+					"letsencrypt": "/etc/letsencrypt"
 				}
 			]
 		},
