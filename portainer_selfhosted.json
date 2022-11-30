@@ -240,7 +240,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "ej52/alpine-nginx-proxy",
+			"image": "jc21/nginx-proxy-manager",
 			"logo": "https://nginxproxymanager.com/icon.png",
 			"platform": "linux",
 			"ports": [
