@@ -37,45 +37,6 @@
 				}
 			]
 		},
-				{
-			"category": [
-				"Other"
-			],
-			"description": "Expose your services easily and securely.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "ej52/alpine-nginx-proxy",
-			"logo": "https://nginxproxymanager.com/icon.png",
-			"platform": "linux",
-			"ports": [
-				"80/tcp",
-				"443/tcp",
-				"81/tcp"
-			],
-			"title": "Nginx Proxy Manager",
-			"type": 1,
-			"volumes": [
-				{
-					"data": "/data",
-					"letsencrypt": "/etc/letsencrypt"
-				}
-			]
-		},
 		{
 			"category": [
 				"Other"
