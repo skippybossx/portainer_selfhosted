@@ -222,6 +222,43 @@
 			"category": [
 				"Other"
 			],
+			"description": "netboot.xyz enables you to boot into many types of operating systems using lightweight tooling to get you up and running as soon as possible.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "netbootxyz/netbootxyz",
+			"logo": "https://netboot.xyz/img/nbxyz-logo.svg",
+			"platform": "linux",
+			"ports": [
+				"3000/tcp"
+			],
+			"title": "netboot.xyz",
+			"type": 1,
+			"volumes": [
+				{
+					"config": "/config",
+					"assets": "/assets"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
 			"description": "Expose your services easily and securely.",
 			"env": [
 				{
