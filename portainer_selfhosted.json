@@ -368,6 +368,42 @@
 				}
 			]
 		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "b4bz/homer",
+			"logo": "https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"title": "Homer",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/app/data"
+				}
+			]
+		},
         {
             "type": 1,
             "title": "Ubuntu",
