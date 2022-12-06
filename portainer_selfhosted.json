@@ -400,7 +400,43 @@
 			"type": 1,
 			"volumes": [
 				{
-					"container": "/app/data"
+					"assets": "/www/assets"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "Dashy is an open source, highly customizable, easy to use, privacy-respecting dashboard app.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "lissy93/dashy",
+			"logo": "https://dashy.to/img/dashy.png",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"title": "Dashy",
+			"type": 1,
+			"volumes": [
+				{
+					"my-conf.yml": "/app/public/conf.yml"
 				}
 			]
 		},
