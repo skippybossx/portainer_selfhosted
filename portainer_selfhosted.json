@@ -332,6 +332,42 @@
 				}
 			]
 		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "phpipam is an open-source web IP address management application (IPAM). Its goal is to provide light, modern and useful IP address management. It is php-based application with MySQL database backend, using jQuery libraries, ajax and HTML5/CSS3 features.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "phpipam/phpipam-www",
+			"logo": "https://phpipam.net/css/images/logo_icon.png",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"title": "phpIPAM",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/app/data"
+				}
+			]
+		},
         {
             "type": 1,
             "title": "Ubuntu",
