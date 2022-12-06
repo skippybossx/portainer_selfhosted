@@ -261,6 +261,42 @@
 			"category": [
 				"Other"
 			],
+			"description": "The Key Management Service (KMS) is an activation service that allows organizations to activate systems within their own network, eliminating the need for individual computers to connect to Microsoft for product activation. It does not require a dedicated system and can be easily co-hosted on a system that provides other services. (Default port 1688:1688/tcp)",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "luodaoyi/kms-server",
+			"logo": "https://seeklogo.com/images/W/windows-10-icon-logo-5BC5C69712-seeklogo.com.png",
+			"platform": "linux",
+			"ports": [
+				"1688/tcp"
+			],
+			"title": "KMS Server",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/app/data"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
 			"description": "Expose your services easily and securely. (Need port 443:443/tcp and 80:80/tcp for certs)",
 			"env": [
 				{
