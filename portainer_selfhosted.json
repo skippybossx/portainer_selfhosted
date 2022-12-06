@@ -222,7 +222,7 @@
 			"category": [
 				"Other"
 			],
-			"description": "netboot.xyz enables you to boot into many types of operating systems using lightweight tooling to get you up and running as soon as possible.",
+			"description": "netboot.xyz enables you to boot into many types of operating systems using lightweight tooling to get you up and running as soon as possible. (Need port 69:69/udp for TFTP)",
 			"env": [
 				{
 					"label": "PGID",
@@ -245,6 +245,8 @@
 			"platform": "linux",
 			"ports": [
 				"3000/tcp"
+				"69/udp"
+				"80/tcp"
 			],
 			"title": "netboot.xyz",
 			"type": 1,
@@ -259,7 +261,7 @@
 			"category": [
 				"Other"
 			],
-			"description": "Expose your services easily and securely.",
+			"description": "Expose your services easily and securely. (Need port 443:443/tcp and 80:80/tcp for certs)",
 			"env": [
 				{
 					"label": "PGID",
