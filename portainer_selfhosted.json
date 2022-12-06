@@ -244,8 +244,8 @@
 			"logo": "https://netboot.xyz/img/nbxyz-logo.svg",
 			"platform": "linux",
 			"ports": [
-				"3000/tcp"
-				"69/udp"
+				"3000/tcp",
+				"69/udp",
 				"80/tcp"
 			],
 			"title": "netboot.xyz",
