@@ -440,6 +440,46 @@
 				}
 			]
 		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "pihole/pihole",
+			"logo": "https://pi-hole.github.io/graphics/Vortex/Vortex_with_text.png",
+			"platform": "linux",
+			"ports": [
+				"80/tcp",
+				"53/udp",
+				"53/tcp",
+				"67/udp"
+			],
+			"title": "Pi-hole",
+			"type": 1,
+			"volumes": [
+				{
+					"etc-pihole": "/etc/pihole",
+					"etc-dnsmasq.d": "/etc/dnsmasq.d"
+				}
+			]
+		},
         {
             "type": 1,
             "title": "Ubuntu",
