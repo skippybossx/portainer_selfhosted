@@ -480,6 +480,42 @@
 				}
 			]
 		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "It is a self-hosted monitoring tool like 'Uptime Robot'.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "louislam/uptime-kuma",
+			"logo": "https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg",
+			"platform": "linux",
+			"ports": [
+				"3001/tcp"
+			],
+			"title": "Uptime Kuma",
+			"type": 1,
+			"volumes": [
+				{
+					"uptime-kuma": "/app/data"
+				}
+			]
+		},
         {
             "type": 1,
             "title": "Ubuntu",
