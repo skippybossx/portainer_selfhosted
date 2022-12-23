@@ -516,6 +516,37 @@
 				}
 			]
 		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "This Image contains a browser-accessible openSUSE Leap 15 Desktop with various productivity and development apps installed. The container is accessible via a browser : https://IP_OF_SERVER:6901. User : kasm_user Password: password",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "kasmweb/opensuse-15-desktop:1.12.0",
+			"logo": "https://www.opensuse.org/build/images/opensuse-logo.png",
+			"platform": "linux",
+			"ports": [
+				"6901/tcp"
+			],
+			"title": "openSUSE Leap 15",
+			"type": 1
+		},
         {
             "type": 1,
             "title": "Ubuntu",
