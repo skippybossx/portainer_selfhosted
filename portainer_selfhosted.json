@@ -538,7 +538,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "kasmweb/opensuse-15-desktop",
+			"image": "kasmweb/opensuse-15-desktop:1.12.0",
 			"logo": "https://www.opensuse.org/build/images/opensuse-logo.png",
 			"platform": "linux",
 			"ports": [
