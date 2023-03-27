@@ -55,10 +55,7 @@
 			],
 			"ports": [
 				"123/udp"
-			],
-			"volumes": [{
-				"container": "/var/lib/postgresql/data"
-			}]
+			]
 		},		
 		{
 			"category": [
