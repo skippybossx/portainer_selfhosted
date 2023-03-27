@@ -45,7 +45,7 @@
 				"Other"
 			],
 			"platform": "linux",
-			"logo": "https://github.com/skippybossx/portainer_selfhosted/blob/main/ntp.png",
+			"logo": "https://raw.githubusercontent.com/skippybossx/portainer_selfhosted/main/ntp.png",
 			"image": "cturra/ntp:latest",
 			"env": [{
 					"NTP_SERVERS": "POSTGRES_USER",
