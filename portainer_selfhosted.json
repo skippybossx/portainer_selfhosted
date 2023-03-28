@@ -56,7 +56,612 @@
 			"ports": [
 				"123/udp"
 			]
-		},		
+		},
+        {
+			"category": [
+				"Other"
+			],
+			"description": "netboot.xyz enables you to pxe boot into many types of operating systems using lightweight tooling to get you up and running as soon as possible. (Need port 69:69/udp for TFTP)",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "netbootxyz/netbootxyz",
+			"logo": "https://netboot.xyz/img/nbxyz-logo.svg",
+			"platform": "linux",
+			"ports": [
+				"3000/tcp",
+				"69/udp",
+				"80/tcp"
+			],
+			"title": "netboot.xyz",
+			"type": 1,
+			"volumes": [
+				{
+					"config": "/config",
+					"assets": "/assets"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "The Key Management Service (KMS) is an activation service that allows organizations to activate systems within their own network, eliminating the need for individual computers to connect to Microsoft for product activation. It does not require a dedicated system and can be easily co-hosted on a system that provides other services. (Default port 1688:1688/tcp)",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "luodaoyi/kms-server",
+			"logo": "https://seeklogo.com/images/W/windows-10-icon-logo-5BC5C69712-seeklogo.com.png",
+			"platform": "linux",
+			"ports": [
+				"1688/tcp"
+			],
+			"title": "KMS Server",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/app/data"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "Expose your services easily and securely. (Need port 443:443/tcp and 80:80/tcp for certs)",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "jc21/nginx-proxy-manager",
+			"logo": "https://nginxproxymanager.com/icon.png",
+			"platform": "linux",
+			"ports": [
+				"81/tcp",
+				"80/tcp",
+				"443/tcp"
+			],
+			"title": "NginxProxyManager",
+			"type": 1,
+			"volumes": [
+				{
+					"data": "/data",
+					"letsencrypt": "/etc/letsencrypt"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "phpipam is an open-source web IP address management application (IPAM). Its goal is to provide light, modern and useful IP address management. It is php-based application with MySQL database backend, using jQuery libraries, ajax and HTML5/CSS3 features.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "phpipam/phpipam-www",
+			"logo": "https://phpipam.net/css/images/logo_icon.png",
+			"platform": "linux",
+			"ports": [
+				"80/tcp"
+			],
+			"title": "phpIPAM",
+			"type": 1,
+			"volumes": [
+				{
+					"container": "/app/data"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "b4bz/homer",
+			"logo": "https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"title": "Homer",
+			"type": 1,
+			"volumes": [
+				{
+					"assets": "/www/assets"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "Dashy is an open source, highly customizable, easy to use, privacy-respecting dashboard app.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "lissy93/dashy",
+			"logo": "https://dashy.to/img/dashy.png",
+			"platform": "linux",
+			"ports": [
+				"8080/tcp"
+			],
+			"title": "Dashy",
+			"type": 1,
+			"volumes": [
+				{
+					"my-conf.yml": "/app/public/conf.yml"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "pihole/pihole",
+			"logo": "https://pi-hole.github.io/graphics/Vortex/Vortex_with_text.png",
+			"platform": "linux",
+			"ports": [
+				"80/tcp",
+				"53/udp",
+				"53/tcp",
+				"67/udp"
+			],
+			"title": "Pi-hole",
+			"type": 1,
+			"volumes": [
+				{
+					"etc-pihole": "/etc/pihole",
+					"etc-dnsmasq.d": "/etc/dnsmasq.d"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "It is a self-hosted monitoring tool like 'Uptime Robot'.",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "louislam/uptime-kuma",
+			"logo": "https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg",
+			"platform": "linux",
+			"ports": [
+				"3001/tcp"
+			],
+			"title": "Uptime Kuma",
+			"type": 1,
+			"volumes": [
+				{
+					"uptime-kuma": "/app/data"
+				}
+			]
+		},
+		{
+			"category": [
+				"Other"
+			],
+			"description": "This Image contains a browser-accessible openSUSE Leap 15 Desktop with various productivity and development apps installed. The container is accessible via a browser : https://IP_OF_SERVER:6901. User : kasm_user Password: password",
+			"env": [
+				{
+					"label": "PGID",
+					"name": "PGID",
+					"set": "1000"
+				},
+				{
+					"label": "PUID",
+					"name": "PUID",
+					"set": "1000"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ",
+					"set": "Europe/Stockholm"
+				}
+			],
+			"image": "kasmweb/opensuse-15-desktop:1.12.0",
+			"logo": "https://www.opensuse.org/build/images/opensuse-logo.png",
+			"platform": "linux",
+			"ports": [
+				"6901/tcp"
+			],
+			"title": "openSUSE Leap 15",
+			"type": 1
+		},
+        {
+            "type": 1,
+            "title": "Ubuntu",
+            "description": "Debian-based Linux operating system",
+            "categories": ["operating-system"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
+            "image": "ubuntu:latest",
+            "interactive": true,
+            "command": "/bin/bash"
+          },
+          {
+            "type": 1,
+            "title": "NodeJS",
+            "description": "JavaScript-based platform for server-side and networking applications",
+            "categories": ["development"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+            "image": "node:latest",
+            "interactive": true,
+            "command": "/bin/bash"
+          },
+          {
+            "type": 3,
+            "title": "OpenAMT",
+            "description": "OpenAMT Cloud Toolkit",
+            "note": "MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
+            "categories": ["Cloud"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/openamt/docker-compose.yml"
+            },
+            "env": [
+              {
+                "name": "POSTGRES_USER",
+                "label": "Database user"
+              },
+              {
+                "name": "POSTGRES_PASSWORD",
+                "label": "Database password"
+              },
+              {
+                "name": "MPS_USER",
+                "label": "MPS user"
+              },
+              {
+                "name": "MPS_PASSWORD",
+                "label": "MPS password"
+              },
+              {
+                "name": "MPS_COMMON_NAME",
+                "label": "MPS URL",
+                "description": "Used to connect to the MPS API."
+              },
+              {
+                "name": "MPS_SECRET",
+                "label": "MPS Secret",
+                "description": "Strong secret key used to log into MPS."
+              },
+              {
+                "name": "VAULT_SECRET",
+                "label": "Vault secret",
+                "description": "Secret token used to log into Vault (don't include '.' character)."
+              }
+            ]
+          },
+          {
+            "type": 2,
+            "title": "Microsoft OMS Agent",
+            "description": "Microsoft Operations Management Suite Linux agent.",
+            "categories": ["OPS"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/microsoft-oms/docker-stack.yml"
+            },
+            "env": [
+              {
+                "name": "AZURE_WORKSPACE_ID",
+                "label": "Workspace ID",
+                "description": "Azure Workspace ID"
+              },
+              {
+                "name": "AZURE_PRIMARY_KEY",
+                "label": "Primary key",
+                "description": "Azure primary key"
+              }
+            ]
+          },
+          {
+            "title": "Sematext Docker Agent",
+            "type": 2,
+            "categories": ["Log Management", "Monitoring"],
+            "description": "Collect logs, metrics and docker events",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
+            "platform": "linux",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
+            },
+            "env": [
+              {
+                "name": "LOGSENE_TOKEN",
+                "label": "Logs token"
+              },
+              {
+                "name": "SPM_TOKEN",
+                "label": "SPM monitoring token"
+              }
+            ]
+          },
+          {
+            "title": "Datadog agent",
+            "type": 2,
+            "categories": ["Monitoring"],
+            "description": "Collect events and metrics",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
+            "platform": "linux",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/datadog-agent/docker-stack.yml"
+            },
+            "env": [
+              {
+                "name": "API_KEY",
+                "label": "Datadog API key"
+              }
+            ]
+          },
+          {
+            "type": 4,
+            "title": "Wordpress",
+            "description": "Wordpress setup with a MySQL database",
+            "note": "Deploys a Wordpress instance connected to a MySQL database.",
+            "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
+          },
+          {
+            "type": 4,
+            "title": "CockroachDB",
+            "description": "CockroachDB cluster",
+            "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+            "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
+          },
+          {
+            "type": 3,
+            "title": "FDO",
+            "description": "FDO",
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/fdo/docker-stack.yml"
+            },
+            "env": [
+              {
+                "name": "owner_api_user",
+                "label": "API Username"
+              },
+              {
+                "name": "owner_api_password",
+                "label": "API Password"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "title": "Dokku",
+            "description": "Dokku setup as a compose file",
+            "categories": ["PaaS"],
+            "platform": "linux",
+            "logo": "",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/dokku/docker-compose.yml"
+            },
+            "env": [
+              {
+                "name": "VERSION",
+                "label": "Dokku version",
+                "description": "Version of Dokku to use ('latest' if empty)",
+                "default": "latest"
+              },
+              {
+                "name": "DOKKU_HOSTNAME",
+                "label": "Dokku hostname",
+                "description": "Global hostname to be registered by Dokku"
+              },
+              {
+                "name": "VOLUME_PATH",
+                "label": "Dokku volume path",
+                "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
+                "default": "/var/lib/dokku"
+              },
+              {
+                "name": "DOKKU_HOST_ROOT",
+                "label": "Dokku host root",
+                "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
+                "default": "/var/lib/dokku/home/dokku"
+              },
+              {
+                "name": "SSH_PORT",
+                "label": "SSH port",
+                "description": "Host port to expose SSH port of Dokku (22 if empty)",
+                "default": "22"
+              },
+              {
+                "name": "HTTP_PORT",
+                "label": "HTTP port",
+                "description": "Host port to expose HTTP port of Dokku (80 if empty)",
+                "default": "80"
+              },
+              {
+                "name": "HTTPS_PORT",
+                "label": "HTTPS port",
+                "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+                "default": "443"
+              }
+            ]
+          },
+          {
+            "type": 2,
+            "title": "LiveSwitch",
+            "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
+            "categories": ["media"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/liveswitch/docker-stack.yml"
+            },
+            "env": [
+              {
+                "name": "POSTGRES_PASSWORD",
+                "label": "Postgres password"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "title": "LiveSwitch",
+            "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
+            "categories": ["media"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/liveswitch/docker-compose.yml"
+            },
+            "env": [
+              {
+                "name": "POSTGRES_PASSWORD",
+                "label": "Postgres password"
+              }
+            ]
+          },
+          {
+            "type": 3,
+            "title": "TOSIBOX Lock for Container",
+            "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
+            "categories": ["edge"],
+            "platform": "linux",
+            "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
+            "repository": {
+              "url": "https://github.com/portainer/templates",
+              "stackfile": "stacks/tosibox/docker-compose.yml"
+            },
+            "env": [
+              {
+                "name": "LICENSE_KEY",
+                "label": "License key"
+              }
+            ]
+          },   
 		{
 			"category": [
 				"Other"
