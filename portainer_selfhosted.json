@@ -37,6 +37,67 @@
 				}
 			]
 		},
+        {
+			"type": 1,
+			"title": "Serge",
+			"description": "AI Chat interface based on llama.cpp for running Alpaca models. Entirely self-hosted, no API keys needed. Fits on 4GB of RAM and runs on the CPU.",
+			"categories": [
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://forum.cloudron.io/assets/uploads/system/site-logo.png",
+			"image": "ghcr.io/nsarrazin/serge:latest",
+			"volumes": [{
+					"datadb": "/data/db",
+					"weights": "/usr/src/app/weights/",
+                    "/etc/localtime": "/etc/localtime:ro"
+				}
+			],
+			"ports": [
+				"8008/tcp"
+			]
+		},
+        {
+			"type": 1,
+			"title": "EmulatorJS",
+			"description": "Retro Gaming Online Emulator",
+			"categories": [
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/EmulatorJS/EmulatorJS/main/docs/Logo-light.png",
+			"image": "lscr.io/linuxserver/emulatorjs:latest",
+			"volumes": [{
+					"config": "/config",
+					"data": "/config"
+				}
+			],
+			"ports": [
+				"3000/tcp",
+                "80/tcp",
+                "4001/tcp"
+			]
+		},
+        {
+			"type": 1,
+			"title": "NTP server",
+			"description": "Chrony is a versatile implementation of the Network Time Protocol (NTP). It can synchronise the system clock with NTP servers, reference clocks (e.g. GPS receiver), and manual input using wristwatch and keyboard. It can also operate as an NTPv4 (RFC 5905) server and peer to provide a time service to other computers in the network.",
+			"categories": [
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://raw.githubusercontent.com/skippybossx/portainer_selfhosted/main/ntp.png",
+			"image": "cturra/ntp:latest",
+			"env": [{
+					"NTP_SERVERS": "POSTGRES_USER",
+					"LOG_LEVE": "Superuser",
+					"NOCLIENTLOG": "true"
+				}
+			],
+			"ports": [
+				"123/udp"
+			]
+		},
 		{
 			"category": [
 				"Other"
@@ -219,26 +280,6 @@
 			]
 		},
 		{
-			"type": 1,
-			"title": "NTP server",
-			"description": "chrony is a versatile implementation of the Network Time Protocol (NTP). It can synchronise the system clock with NTP servers, reference clocks (e.g. GPS receiver), and manual input using wristwatch and keyboard. It can also operate as an NTPv4 (RFC 5905) server and peer to provide a time service to other computers in the network.",
-			"categories": [
-				"Other"
-			],
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/skippybossx/portainer_selfhosted/main/ntp.png",
-			"image": "cturra/ntp:latest",
-			"env": [{
-					"NTP_SERVERS": "POSTGRES_USER",
-					"LOG_LEVE": "Superuser",
-					"NOCLIENTLOG": "true"
-				}
-			],
-			"ports": [
-				"123/udp"
-			]
-		},
-        {
 			"category": [
 				"Other"
 			],
@@ -499,73 +540,6 @@
 					"etc-dnsmasq.d": "/etc/dnsmasq.d"
 				}
 			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "It is a self-hosted monitoring tool like 'Uptime Robot'.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "louislam/uptime-kuma",
-			"logo": "https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg",
-			"platform": "linux",
-			"ports": [
-				"3001/tcp"
-			],
-			"title": "Uptime Kuma",
-			"type": 1,
-			"volumes": [
-				{
-					"uptime-kuma": "/app/data"
-				}
-			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "This Image contains a browser-accessible openSUSE Leap 15 Desktop with various productivity and development apps installed. The container is accessible via a browser : https://IP_OF_SERVER:6901. User : kasm_user Password: password",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "kasmweb/opensuse-15-desktop:1.12.0",
-			"logo": "https://www.opensuse.org/build/images/opensuse-logo.png",
-			"platform": "linux",
-			"ports": [
-				"6901/tcp"
-			],
-			"title": "openSUSE Leap 15",
-			"type": 1
 		},
         {
             "type": 1,
@@ -842,188 +816,7 @@
                 "label": "License key"
               }
             ]
-          },   
-		{
-			"category": [
-				"Other"
-			],
-			"description": "A Free and Open Source Speedtest for HTML5 and more.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "linuxserver/librespeed",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"title": "LibreSpeed",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/config",
-					"bind": "/portainer/Files/AppData/Config/LibreSpeed"
-				}
-			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "Welcome to LibreNMS, a fully featured network monitoring system that provides a wealth of features and device support.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "librenms/librenms",
-			"logo": "https://secure.gravatar.com/avatar/aeed3f63cf6744469af53a18875de783.jpg",
-			"platform": "linux",
-			"ports": [
-				"8000/tcp"
-			],
-			"title": "LibreNMS",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/data"
-				}
-			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "Grafana has become the world’s most popular technology used to compose observability dashboards with everything from Prometheus & Graphite metrics, to logs and application data to power plants and beehives.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "grafana/grafana",
-			"logo": "https://secure.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d.jpg",
-			"platform": "linux",
-			"ports": [
-				"3000/tcp"
-			],
-			"title": "Grafana",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/grafana"
-				}
-			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "Paperwork is an open-source, self-hosted alternative to services like Evernote ®, Microsoft OneNote ® or Google Keep ®",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "zuhkov/paperwork",
-			"logo": "https://paperwork.cloud/paperwork-logo.png",
-			"platform": "linux",
-			"ports": [
-				"80/tcp"
-			],
-			"title": "Paperwork",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"category": [
-				"Other"
-			],
-			"description": "Hastebin is a simple pastebin, which can be installed on a protected network.",
-			"env": [
-				{
-					"label": "PGID",
-					"name": "PGID",
-					"set": "1000"
-				},
-				{
-					"label": "PUID",
-					"name": "PUID",
-					"set": "1000"
-				},
-				{
-					"label": "TZ",
-					"name": "TZ",
-					"set": "Europe/Stockholm"
-				}
-			],
-			"image": "rlister/hastebin",
-			"logo": "https://www.saashub.com/images/app/service_logos/10/2e5b036c770f/large.png",
-			"platform": "linux",
-			"ports": [
-				"7777/tcp"
-			],
-			"title": "Hastebin",
-			"type": 1,
-			"volumes": [
-				{
-					"container": "/app/data"
-				}
-			]
-		},
+          },                  
 		{
 			"type": 1,
 			"title": "Registry",
