@@ -39,6 +39,25 @@
 		},
         {
 			"type": 1,
+			"title": "ztncui",
+			"description": "ZeroTier network controller UI",
+			"categories": [
+				"Other"
+			],
+			"platform": "linux",
+			"logo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/ZeroTier_Logo.png",
+			"image": "mdplusplus/zerotier-network-controller-ui",
+			"volumes": [{
+					"zerotier_config": "/var/lib/zerotier-one/",
+					"ztncui_config": "/opt/ztncui/src/etc/"
+				}
+			],
+			"ports": [
+				"3443/tcp"
+			]
+		},
+        {
+			"type": 1,
 			"title": "Serge",
 			"description": "AI Chat interface based on llama.cpp for running Alpaca models. Entirely self-hosted, no API keys needed. Fits on 4GB of RAM and runs on the CPU.",
 			"categories": [
