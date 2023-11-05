@@ -48,8 +48,8 @@
 			"logo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/ZeroTier_Logo.png",
 			"image": "mdplusplus/zerotier-network-controller-ui",
 			"volumes": [{
-					"zerotier_config": "/var/lib/zerotier-one/",
-					"ztncui_config": "/opt/ztncui/src/etc/"
+					"/path/to/zerotier_config": "/var/lib/zerotier-one/",
+					"/path/to/ztncui_config/": "/opt/ztncui/src/etc/"
 				}
 			],
 			"ports": [
