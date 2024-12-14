@@ -23,7 +23,7 @@
 					"set": "Europe/Stockholm"
 				}
 			],
-			"image": "abesnier/guacamole:latest",
+			"image": "jwetzell/guacamole:1.5.5",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/guacamole.png",
 			"platform": "linux",
 			"ports": [
