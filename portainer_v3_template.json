@@ -4950,7 +4950,7 @@
         "Managementutilityserver"
       ],
       "description": "A clientless remote desktop gateway.",
-      "image": "oznu/guacamole:latest",
+      "image": "jwetzell/guacamole:1.5.5",
       "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/guacamole.png",
       "name": "guacamole",
       "note": "The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
